@@ -8,9 +8,9 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 const Home = (props) => {
 
   const [open,setOpen] = useState(false)
-
+  
   return (
-    <div className="home-container">
+    <div className="home">
       <Helmet>
         <title>Beranda</title>
         <meta property="og:title" content="Trustworthy Academic Grasshopper" />
@@ -20,7 +20,7 @@ const Home = (props) => {
           <img
             id="logos"
             alt="logo"
-            src="https://presentation-website-assets.teleporthq.io/logos/logo.png"
+            src="/external/logoss.svg"
             className="home-image"
           />
           <div className="home-nav"></div>
@@ -28,9 +28,10 @@ const Home = (props) => {
             <button id="log" className="home-login button">
               <Link to="/login" >Login</Link>
             </button>
-            <button id="reg" className="home-register button">
-              <Link to="/regis" >Daftar</Link>
-            </button>
+            <Link to="/regis" ><button id="reg" className="home-register button">
+              Daftar
+            </button></Link>
+            
           </div>
           <div data-role="BurgerMenu" onClick={()=>setOpen(!open)} className="home-burger-menu">
             <svg viewBox="0 0 1024 1024" className="home-icon">
@@ -67,31 +68,35 @@ const Home = (props) => {
         </header>
       </div>
       <div className="mobile" style={{display: open? 'block':'none'}} >
-        <div className="home-buttons">
+        <div className="home-buttonss">
           <button id="log" className="home-login button">
           <Link to="/login" >Login</Link>
           </button>
+          <Link to="/regis">
           <button id="reg" className="home-register button">
-          <Link to="/regis" >Daftar</Link>
+          Daftar
           </button>
+          </Link>
         </div>
       </div>
       <div className="home-container03">
         <div id="hook" className="home-container04">
-          <h1 className="home-text">Konsultasi Masalah (Contoh)</h1>
+          <h1 className="home-texts">Konsultasi Masalah Anda</h1>
           <span className="home-text01">
             <span>
-              Konsultasikan masalah anda bla bla bla bla bla bla bla bla 
+            Kesehatan mental adalah aset berharga. sambut kebahagiaan, hadapi tantangan dan wujudkan 
+            ketenangan batin bersama kami!
             </span>
-            <span>bla bla bla bla .</span>
           </span>
-          <button id="btn" type="button" className="home-button button">
-            <Link to="/regis" >Daftar Sekarang</Link>
-          </button>
+          <Link to="/regis" ><button id="btn" type="button" className="home-buttons button">
+            Daftar Sekarang
+          </button></Link>
+          
         </div>
         <img
+        id='imgs'
           alt="image"
-          src="/external/group%201.svg"
+          src="/external/pic.jpg"
           loading="lazy"
           className="home-image2"
         />
@@ -100,7 +105,7 @@ const Home = (props) => {
         <div className="home-container06">
           <span className="home-text04">Quotes of The Day </span>
           <span className="home-text05">
-            &quot;Yang sudah boleh pulang &quot;
+            &quot;Standar yang Anda lalui, adalah standar yang Anda terima &quot;
           </span>
         </div>
       </div>
@@ -121,7 +126,7 @@ const Home = (props) => {
               <span>Bersama </span>
               <br></br>
             </h1>
-            <span className="home-text12">Deskripsi tentang layanannya</span>
+            <span className="home-text12">Dengarkan podcast menuju Perjalana Kesehatan Mental yang Lebih Baik.</span>
           </div>
           <div className="home-container12">
             <div className="home-container13">
@@ -143,7 +148,7 @@ const Home = (props) => {
               <span>Chat</span>
               <br></br>
             </h1>
-            <span className="home-text19">Deskripsi tentang layanannya</span>
+            <span className="home-text19">ruang dialog interaksi dan berbagi cerita</span>
           </div>
           <div className="home-container14">
             <div className="home-container15">
@@ -157,7 +162,7 @@ const Home = (props) => {
               <span>via Video Call</span>
               <br></br>
             </h1>
-            <span className="home-text25">Deskripsi tentang layanannya</span>
+            <span className="home-text25">interaksi tatap muka tuk berbagi cerita</span>
           </div>
           <img
             alt="image"
@@ -172,11 +177,10 @@ const Home = (props) => {
         </div>
       </div>
       <div className="home-container16">
-        <span className="home-text26">Kata - Kata Penenang</span>
         <div className="home-container17">
           <h1 className="home-text27">
             <br className="home-text28"></br>
-            <span>&quot;Sekian dan terima kasih&quot;</span>
+            <span>&quot;Tersenyumlah untuk bahagia bukan untuk terlihat bahagia&quot;</span>
             <br></br>
           </h1>
           <h1 className="home-text31">
@@ -189,7 +193,7 @@ const Home = (props) => {
         <img
           id="logo"
           alt="logo"
-          src="https://presentation-website-assets.teleporthq.io/logos/logo.png"
+          src="/external/logos2.svg"
           className="home-image5"
         />
         <div className="home-container19">
@@ -197,19 +201,19 @@ const Home = (props) => {
             <svg viewBox="0 0 1024 1024" className="home-icon16">
               <path d="M854 342v-86l-342 214-342-214v86l342 212zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z"></path>
             </svg>
-            <span className="home-text34">AdindaAyu@gmail.com</span>
+            <span className="home-text34">Psy.Share@gmail.com</span>
           </div>
           <div className="home-container21">
             <svg viewBox="0 0 877.7142857142857 1024" className="home-icon18">
               <path d="M562.857 556.571c9.714 0 102.857 48.571 106.857 55.429 1.143 2.857 1.143 6.286 1.143 8.571 0 14.286-4.571 30.286-9.714 43.429-13.143 32-66.286 52.571-98.857 52.571-27.429 0-84-24-108.571-35.429-81.714-37.143-132.571-100.571-181.714-173.143-21.714-32-41.143-71.429-40.571-110.857v-4.571c1.143-37.714 14.857-64.571 42.286-90.286 8.571-8 17.714-12.571 29.714-12.571 6.857 0 13.714 1.714 21.143 1.714 15.429 0 18.286 4.571 24 19.429 4 9.714 33.143 87.429 33.143 93.143 0 21.714-39.429 46.286-39.429 59.429 0 2.857 1.143 5.714 2.857 8.571 12.571 26.857 36.571 57.714 58.286 78.286 26.286 25.143 54.286 41.714 86.286 57.714 4 2.286 8 4 12.571 4 17.143 0 45.714-55.429 60.571-55.429zM446.857 859.429c197.714 0 358.857-161.143 358.857-358.857s-161.143-358.857-358.857-358.857-358.857 161.143-358.857 358.857c0 75.429 24 149.143 68.571 210.286l-45.143 133.143 138.286-44c58.286 38.286 127.429 59.429 197.143 59.429zM446.857 69.714c237.714 0 430.857 193.143 430.857 430.857s-193.143 430.857-430.857 430.857c-72.571 0-144.571-18.286-208.571-53.714l-238.286 76.571 77.714-231.429c-40.571-66.857-61.714-144-61.714-222.286 0-237.714 193.143-430.857 430.857-430.857z"></path>
             </svg>
-            <span className="home-text35">085156203867</span>
+            <span className="home-text35">081122334455</span>
           </div>
           <div className="home-container22">
             <svg viewBox="0 0 877.7142857142857 1024" className="home-icon20">
               <path d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"></path>
             </svg>
-            <span className="home-text36">@Mental.Health</span>
+            <span className="home-text36">@Psy.Share</span>
           </div>
         </div>
         <img

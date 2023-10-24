@@ -19,7 +19,7 @@
 }
 .regis {
   flex: 0 0 auto;
-  width: 400px;
+  width: 37%;
   height: 100%;
   display: flex;
   align-items: flex-start;
@@ -86,18 +86,17 @@
   padding-bottom: 17px;
 }
 .home-button {
-  color: rgb(255, 255, 255);
+  color: #003e17;
   width: 100%;
   font-size: 15px;
   font-style: normal;
-  margin-top: var(--dl-space-space-unit);
   font-family: "poppins";
   font-weight: 500;
   padding-top: 17px;
   border-width: 0px;
   border-radius: 10px;
   padding-bottom: 17px;
-  background-color: rgb(226, 111, 111);
+  background-color: #83f28f;
 }
 @media(max-width: 991px) {
   .home-container1 {
@@ -117,11 +116,15 @@
     padding-left: 0px;
     justify-content: center;
   }
+  .regis{
+    width: 100%;
+    padding: 20px;
+  }
   .home-container2 {
     width: 336px;
   }
   .home-text {
-    font-size: 1.9em;
+    font-size: 0.9em;
   }
   .home-text1 {
     font-size: 16px;

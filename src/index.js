@@ -12,6 +12,8 @@ import Home from './views/home'
 import Login from './views/login'
 import NotFound from './views/not-found'
 import Regis from './views/regis'
+import Dash from './views/dash'
+import Podcast from './views/podcast'
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
         <Route component={Login} exact path="/login" />
         <Route component={Home} exact path="/"/>
         <Route component={Regis} exact path="/regis"/>
+        <Route component={Dash} exact path="/dash"/>
+        <Route component={Podcast} exact path="/podcast"/>
         <Route component={NotFound} path="**" />
         <Redirect to="**" />
       </Switch>
